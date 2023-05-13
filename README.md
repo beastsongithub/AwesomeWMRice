@@ -5,12 +5,12 @@ I use flameshot for screenshots you may want to change it .
 the shell scripts may or may not work on your system.
 
 # Requirements:
-awesome 4.3(mine is build against lua 5.1 ith luajit)
-bling (https://github.com/BlingCorp/bling)
-picom
-dkjson for lua5.1
-flameshot
-networkmanager
-pipewire
-rofi
-rofi-emoji
+awesome 4.3(mine is build against lua 5.1 ith luajit)\
+bling (https://github.com/BlingCorp/bling)\
+picom\
+dkjson for lua5.1\
+flameshot\
+networkmanager\
+pipewire\
+rofi\
+rofi-emoji\
