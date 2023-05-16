@@ -1,0 +1,292 @@
+configuration {
+modes: "combi,emoji";
+combi-modes: "drun";
+font: "FiraCode Nerd Font 12";
+fixed-num-lines: false;
+show-icons: true;
+icon-theme: "Zafiro-Icons-Light";
+/*	drun-match-fields: "name,generic,exec,categories,keywords";*/
+/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+/*	disable-history: false;*/
+/*	ignored-prefixes: "";*/
+/* sidebar-mode: true; */
+/*	eh: 1;*/
+/*	matching: "normal";*/
+/*	tokenize: true;*/
+/*	m: "-5";*/
+/*	filter: ;*/
+/*	dpi: -1;*/
+/*	threads: 0;*/
+/*	scroll-method: 0;*/
+/*	window-format: "{w}    {c}   {t}";*/
+/*	click-to-exit: true;*/
+/*	max-history-size: 25;*/
+/* combi-hide-mode-prefix: true; */
+combi-display-format: "{text}";
+/*	matching-negate-char: '-' /* unsupported */;*/
+/*	cache-dir: ;*/
+/*	drun-use-desktop-cache: false;*/
+/*	drun-reload-desktop-cache: false;*/
+/*	application-fallback-icon: ;*/
+/*	pid: "/run/user/1000/rofi.pid";*/
+/*	display-windowcd: ;*/
+/*	display-run: ;*/
+/*	display-ssh: ;*/
+display-drun:"Search" ;
+display-combi:"Search" ;
+/*	display-keys: ;*/
+/*	display-filebrowser: ;*/
+display-emoji:"Search" ;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+}
+
+@theme "gruvbox-dark"
+
+
+/** Default settings, every widget inherits from this. */
+/**/
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+    /* Gruvbox dark colors */
+    /* gruvbox-dark-bg0:          #282828; */
+    /* gruvbox-dark-bg0-soft:     #32302f; */
+    /* gruvbox-dark-bg3:          #665c54; */
+    /* gruvbox-dark-fg0:          #fbf1c7; */
+    /* gruvbox-dark-fg1:          #ebdbb2; */
+    /* gruvbox-dark-red-dark:     #cc241d; */
+    /* gruvbox-dark-red-light:    #fb4934; */
+    /* gruvbox-dark-yellow-dark:  #d79921; */
+    /* gruvbox-dark-yellow-light: #fabd2f; */
+    /* gruvbox-dark-gray:         #a89984; */
+    gruvbox-dark-bg0:          #ECEEE9;
+    gruvbox-dark-bg0-soft:     #D5CEB4;
+    gruvbox-dark-bg3:          #0091A2;
+    gruvbox-dark-fg0:          #36576A;
+    gruvbox-dark-fg1:          #333333;
+    gruvbox-dark-red-dark:     #B7386F;
+    gruvbox-dark-red-light:    #CD7069;
+    gruvbox-dark-yellow-dark:  #D0D34E;
+    gruvbox-dark-yellow-light: #e5c07b;
+    gruvbox-dark-gray:         #3E5E6B;
+    /* Gruvbox dark colors */
+    /* Theme colors */
+    background:                  @gruvbox-dark-bg0;
+    background-color:            @background;
+    foreground:                  @gruvbox-dark-fg1;
+    border-color:                @gruvbox-dark-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @gruvbox-dark-bg0-soft;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @gruvbox-dark-bg3;
+    selected-normal-foreground:  @gruvbox-dark-fg0;
+
+    active-background:           @gruvbox-dark-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+/**/
+/**/
+/* /** */
+/*  * Entry box on top.  */
+/*  */ */
+/* entry { */
+/*     /** top  and bottom border */ */
+/*     border: 2px 2px 2px 0px; */
+/*     border-color:  @border-color; */
+/*     border-radius: 0px 5px 5px 0px; */
+/*     background-color: @alternate-normal-background; */
+/*     /** 4px padding on the inside of the border. */ */
+/*     padding:       4px; */
+/*     /** when no text is set, show 'Type to filter' */ */
+/*     placeholder:       ""; */
+/*     /** this text is dark grey */ */
+/*     placeholder-color: @normal-foreground; */
+/*     /** inherit font setting from parent */ */
+/*     font: inherit; */
+/*     text-color: @alternate-normal-foreground; */
+/*     cursor: text; */
+/* } */
+/**/
+/* /** */
+/*  * Input bar */
+/*  */ */
+/* inputbar { */
+/*     /** no spacing between widgets */ */
+/*     spacing: 0; */
+/*     /** include entry and mode-switcher (removes prompt) */ */
+/*     children: [  icon-keyboard, entry ]; */
+/*     /** use monospace font. */ */
+/*     font:   "FiraCode Nerd Font 14"; */
+/* } */
+/**/
+/* /** */
+/*  * Mode switcher. */
+/*  *  We set it up to 'connect' to reset of input bar. */
+/*  */ */
+/* /* mode-switcher { */ */
+/* /*     /** we use spacing between children to draw a 'border' */ */ */
+/* /*     spacing: 2px; */ */
+/* /*     border: 2px; */ */
+/* /*     border-radius: 0px 4px 4px 0px; */ */
+/* /*     /** border and background are same color, widget will have desired bg color.*/ */ */
+/* /*     /** this way the spacing shows as a border */ */ */
+/* /*     border-color: darkgrey; */ */
+/* /*     background-color: darkgrey; */ */
+/* /*     /** inherit font setting from parent */ */ */
+/* /*     font: inherit; */ */
+/* /* } */ */
+/**/
+/* /** */
+/*  * Buttons in mode switcher. */
+/*  */ */
+/* /* button { */ */
+/* /*     background-color: @alternate-normal-background; */ */
+/* /*     border-color: @border-color; */ */
+/* /*     /** inherit font setting from parent */ */ */
+/* /*     font: inherit; */ */
+/* /*     cursor: pointer; */ */
+/* /* } */ */
+/**/
+/* /** */
+/*  * Selected buttons in mode switcher. */
+/*  */ */
+/* /* button selected { */ */
+/* /*     background-color: lightgrey; */ */
+/* /*     text-color:       black; */ */
+/* /* } */ */
+/**/
+/* /** */
+/*  * Small icon in inputbar */
+/*  */ */
+/* icon-keyboard { */
+/*     /** give it a 2 pixel border, except on the right side. */ */
+/*     border:        2px 0px 2px 2px; */
+/*     /** with a radius on the left two corners. */  */
+/*     border-radius: 5px 0px 0px 5px; */
+/*     /** add matching border. */ */
+/*     border-color: @border-color; */
+/*     /** match background. */ */
+/*     background-color: @alternate-normal-background; */
+/*     /** move icon away from right border. */ */
+/*     padding: 0px 10px 0px 10px; */
+/*     /** Only use required space. */ */
+/*     expand: false; */
+/*     /** icon is around 1.2 font width */ */
+/*     size: 1.2em; */
+/*     /** Icon name, we use symbolic name here */ */
+/*     filename: "keyboard"; */
+/* } */
+/**/
+/* /** */
+/*  * Main window widget */
+/*  */ */
+window {
+    /** Place on top center of rofi window on the top center of the screen. */
+    /* anchor: center; */
+    /* location: center; */
+
+    /** 100% screen width */
+    /* width:            50%; */
+    /* height:            40%; */
+
+    /** Black transparent color. */
+    background-color: @normal-background;
+    /** Small one 1 font width border on inside of window. */
+    /* padding:           1px; */
+
+    /** border */
+    /* border-color: @normal-background; */
+    border-radius: 0.7em 0.7em 0.7em 0.7em;
+    /* border: 0.3em 0.3em 0.3em 0.3em; */
+}
+/**/
+/* /** */
+/*  * Main container in the window. */
+/*  */ */
+/* mainbox {  */
+/*     /** spacing between widgets */ */
+/*     /* orientation: horizontal; */ */
+/*     spacing: 1em; */
+/* } */
+/**/
+/* /** */
+/*  * listview that shows entries. */
+/*  */ */
+listview {
+    /** 4 rows. */
+    lines: 4;
+    /** 6 columns */
+    columns: 3;
+    /** add 1 em spacing between items */
+    /* spacing: 0.5em; */
+    /** Don't reduce columns if less items are available. */
+    fixed-columns: true;
+    fixed-height: true;
+    layout: vertical;
+    flow: vertical;
+    dynamic: true;
+}
+/* /** */
+/*  * entry in listview. */
+/*  */ */
+element {
+    /** clients are packed vertically. */
+    orientation:      horizontal;
+    children: [ element-icon, element-text ];
+    /** 2 px border */
+    /* border:           2px; */
+    /** with 4px radius on corners. */
+    border-radius:    0.7em 0.7em 0.7em 0.7em;
+    /* border-color:     @border-color; */
+    /* background-color: @alternate-normal-background; */
+    /** 4 px padding on the inside of border */
+    /* cursor: pointer; */
+    /* spacing: 6px; */
+    padding:          0.6em;
+}
+/**/
+/* /** selected element */ */
+/* element selected { */
+/*     /** highlighted colors */ */
+/*     /* border-radius:    8px 0px 8px 0px; */ */
+/*     border: 4px; */
+/*     background-color: @selected-normal-background; */
+/*     text-color:       @selected-normal-foreground; */
+/* } */
+/**/
+/* /** Entry icon */ */
+element-icon {
+    /** change size to 128 pixels. */
+    size: 2.0em;
+    padding:          0.1em;
+    cursor: inherit;
+}
+/**/
+/* /** Entry text */ */
+element-text {
+    /* align font in (horizontally) center */
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font: "FiraCode Nerd Font 11";
+    /* cursor: inherit; */
+    /* text-color: @alternate-normal-foreground; */
+}
