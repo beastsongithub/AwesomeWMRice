@@ -15,7 +15,9 @@ pipewire\
 rofi\
 rofi-emoji\
 betterlockscreen\
-xidlehook
+xidlehook \
+Cascadia nerd font \
+jetbrainsmono font
 
 # Credits
 https://github.com/raven2cz \
