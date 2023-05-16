@@ -14,3 +14,5 @@ networkmanager\
 pipewire\
 rofi\
 rofi-emoji\
+betterlockscreen\
+xidlehook
