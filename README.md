@@ -16,3 +16,8 @@ rofi\
 rofi-emoji\
 betterlockscreen\
 xidlehook
+
+# Credits
+https://github.com/raven2cz \
+https://github.com/AlphaTechnolog \
+https://github.com/unixsea/dotfiles 
